@@ -9,7 +9,7 @@ const Drawer = createDrawerNavigator();
 
 function Home({navigation}){
   function onPressHandler(){
-    navigation.navigate('New_Page');
+    navigation.navigate('New_Page1');
   }
   return(
     <View style={styles.body}>
@@ -22,7 +22,97 @@ function Home({navigation}){
     </View>
   )
 }
-function New_Page({navigation}){
+function New_Page1({navigation}){
+
+  function onPressHandler(){
+    // navigation.replace('Home')
+    navigation.navigate('New_Page2');
+  }
+
+  return(
+    <View style={styles.body}>
+      <Text style={styles.text}>Bonjour !!</Text>
+      <Pressable onPress={onPressHandler} style={styles.buttonHome}>
+        <Text>
+          <Icon name="arrow-right" size={20} color="black" />
+        </Text>
+      </Pressable>
+    </View>
+  )
+}
+function New_Page2({navigation}){
+
+  function onPressHandler(){
+    // navigation.replace('Home')
+    navigation.navigate('New_Page3');
+  }
+
+  return(
+    <View style={styles.body}>
+      <Text style={styles.text}>Bonjour !!</Text>
+      <Pressable onPress={onPressHandler} style={styles.buttonHome}>
+        <Text>
+          <Icon name="arrow-right" size={20} color="black" />
+        </Text>
+      </Pressable>
+    </View>
+  )
+}
+function New_Page3({navigation}){
+
+  function onPressHandler(){
+    // navigation.replace('Home')
+    navigation.navigate('New_Page4');
+  }
+
+  return(
+    <View style={styles.body}>
+      <Text style={styles.text}>Bonjour !!</Text>
+      <Pressable onPress={onPressHandler} style={styles.buttonHome}>
+        <Text>
+          <Icon name="arrow-right" size={20} color="black" />
+        </Text>
+      </Pressable>
+    </View>
+  )
+}
+function New_Page4({navigation}){
+
+  function onPressHandler(){
+    // navigation.replace('Home')
+    navigation.navigate('New_Page5');
+  }
+
+  return(
+    <View style={styles.body}>
+      <Text style={styles.text}>Bonjour !!</Text>
+      <Pressable onPress={onPressHandler} style={styles.buttonHome}>
+        <Text>
+          <Icon name="arrow-right" size={20} color="black" />
+        </Text>
+      </Pressable>
+    </View>
+  )
+}
+function New_Page5({navigation}){
+
+  function onPressHandler(){
+    // navigation.replace('Home')
+    navigation.navigate('New_Page6');
+  }
+
+  return(
+    <View style={styles.body}>
+      <Text style={styles.text}>Bonjour !!</Text>
+      <Pressable onPress={onPressHandler} style={styles.buttonHome}>
+        <Text>
+          <Icon name="arrow-right" size={20} color="black" />
+        </Text>
+      </Pressable>
+    </View>
+  )
+}
+function New_Page6({navigation}){
 
   function onPressHandler(){
     // navigation.replace('Home')
@@ -46,7 +136,12 @@ export default function App() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="New_Page" component={New_Page} />
+        <Drawer.Screen name="New_Page1" component={New_Page1} />
+        <Drawer.Screen name="New_Page2" component={New_Page2} />
+        <Drawer.Screen name="New_Page3" component={New_Page3} />
+        <Drawer.Screen name="New_Page4" component={New_Page4} />
+        <Drawer.Screen name="New_Page5" component={New_Page5} />
+        <Drawer.Screen name="New_Page6" component={New_Page6} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
